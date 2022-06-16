@@ -5,11 +5,17 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<!-- 클래스 하나당 하나의 bean 필요 -->
-<bean id = "tv" class ="polymorphism.Pol_SamsungTV"	>
- 	<!-- constructor injection  constructor-arg element-->
- 	<constructor-arg ref = "sony"></constructor-arg>
-</bean>
-<bean id = "sony" class ="polymorphism.Pol_SamsungTV"></bean>
 
+<bean id = "collectionBean"
+ class = "com.springbook.ioc.injection.CollectionBean">
+ 	<property name = "addressList">
+ 	  <list>
+ 	   <value>서울시 강남구 논현동</value>
+ 	   <value>서울시 강서구 화곡동</value>
+ 	  </list>
+ 	</property>
+ </bean>
+
+<!--  위의 CollectionBean 설정은 두개의 문자열 주소가 저장된 List 객체를 collectionBean
+객체의 setAddressList() 메소드를 호출할 때, 인자로 전달하여 멤버변수를 초기화함 -->
 </beans>
