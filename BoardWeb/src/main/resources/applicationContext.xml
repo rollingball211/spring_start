@@ -5,5 +5,9 @@
 
 
 <!-- 클래스 하나당 하나의 bean 필요 -->
-<bean id = "tv" class ="polymorphism.Pol_SamsungTV"/>
+<bean id = "tv" class ="polymorphism.Pol_SamsungTV">
+ 	<!-- constructor injection  constructor-arg element-->
+ 	<constructor-arg ref = "sony"></constructor-arg>
+</bean>
+<bean id = "sony" class ="polymorphism.Pol_SamsungTV"></bean>
 </beans>
