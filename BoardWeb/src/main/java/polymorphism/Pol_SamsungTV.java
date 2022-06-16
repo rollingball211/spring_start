@@ -48,5 +48,21 @@ public class Pol_SamsungTV implements TV {
 	생성자가 여러개 오버로딩 되어있다면 , index 속성을 이용, 0부터 시작 
 	 
 	 xml 파일의 beanId를 적절히 교체하면 (ex:appleSpeaker) 실행되는 스피커가 변경됨.
+	 
+	4. Setter injection
+	Setter method + 기본 생성자 필요. <bean> 객체 생성 이후.
+	<constructor- arg> 대신 <property> 필요 
+	ex)
+	<property name = "speaker" ref ="apple"></property>
+	
+	name의 속성값이 호출하고자 하는 메소드 이름.
+	다른 <bean> 객체 = > ref
+	고정된 문자열/정수 기본형데이터 => value
+	
+	5. p nameSpace 사용하기
+	p:변수명-ref="참조할 객체의 이름이나 아이디"(객체 할당 시)
+	p:변수명="설정할 값"
+	
+	
 	 */
 }
