@@ -34,5 +34,7 @@ public class Appendix1 {
   특수기호가 포함된 아이디를 bean 아이디로 지정할때는 id 대신 name 속성을 사용함.
   name 속성값 역시 스프링 파일 내에서 유일해야 함. 
   
+  APPENDIX3 추가
+  
  */
 }
