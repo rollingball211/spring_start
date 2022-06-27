@@ -1,7 +1,18 @@
 package polymorphism;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("tv") // = <bean id = "tv" class = polymorphism.Pol_LgTV"></bean>
 public class Pol_LgTV implements TV {
 // Polymorph를 이용할 클래스들은 interface TV를 구현한다.
+	
+	@Autowired
+	private Speaker speaker;
+	
+	public Pol_LgTV() {
+		System.out.println("POL_LGTV 객체 생성");
+	}
 	
 	public void PowerOn() {
 		System.out.println("LG티비------전원 on");
@@ -13,11 +24,12 @@ public class Pol_LgTV implements TV {
 	}
 	
 	public void volumeUp() {
-		System.out.println("LG티비--------소리올림");
+		speaker.volumeUp();
 		
 	}
 	
 	public void volumeDown() {
-		System.out.println("LG티비-------소리내림");
+		speaker.volumeDown();
 	}
+	
 }

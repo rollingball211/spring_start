@@ -11,7 +11,7 @@ public class Pol_User {
 	public static void main(String[] args) {
 
 		//SamsungTV tv = new SamsungTV();
-		LgTV tv = new LgTV(); //tv¿« ∞¥√º∏¶ ∏∏µÎ
+		Pol_LgTV tv = new Pol_LgTV(); //tv¿« ∞¥√º∏¶ ∏∏µÎ
 		
 		tv.PowerOn();
 		tv.volumeUp();
