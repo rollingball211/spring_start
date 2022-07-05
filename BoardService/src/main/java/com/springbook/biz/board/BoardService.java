@@ -11,6 +11,5 @@ public interface BoardService {
 	void updateBoard(BoardVO vo);
 	void deleteBoard(BoardVO vo);
 	BoardVO getBoard(BoardVO vo);
-	
 	List<BoardVO> getBoardList(BoardVO vo);
 }

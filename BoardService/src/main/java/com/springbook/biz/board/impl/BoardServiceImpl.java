@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
 
-@Service("boardSerivce")
+@Service("boardService")
 public class BoardServiceImpl implements BoardService {
 @Autowired
 	
