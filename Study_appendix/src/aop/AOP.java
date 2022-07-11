@@ -1,3 +1,4 @@
+package aop;
 
 public class AOP {
 //APPEDNIX 1 - AOP(Aspect Oriented Programming)
@@ -28,11 +29,13 @@ public class AOP {
 	횡단 관심에 해당하는 공통 기능의 코드를 의미함.
 	독립된 클래스의 메소드로 작성. 언제 동작할지 스프링 설정파일을 통해 지정 가능.
 	
-	5.위빙(Weaving)
+	5.위빙(Weaving)	
 	
 	포인트컷으로 지정한 핵심 관심 메소드가 호출될 때, 어드바이스에 해당하는 횡단관심 메소드가
 	삽입되는 과정을 의미함.
 	비즈니스 메소드를 수정하지 않고도 기능 추가 /변경 가능
+	
+	컴파일타임 / 로딩타임 / 런타임 . 스프링에선 런타임만 지원
 	
     6.Aspect / Advisor
     Aspect = pointCut + Advisor
