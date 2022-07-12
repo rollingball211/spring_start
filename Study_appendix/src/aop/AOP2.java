@@ -27,7 +27,24 @@ public class AOP2 {
 		after-returning
 		after-throwing
 		around
+
 		
+		before <aop:before>
+		메소드 실행 전 처리될 내용 기술하기 위해 사용.
+		
+		after <aop:after>
+		try-catch-finally 처럼
+		예외 발생 여부에 상관없이 무조건 수행되는 어드바이스 등록 시 사용.
+		
+		after returning <aop:after-returning>
+		포인트컷으로 지정된 메소드 실행 후 , 수행 결과로 생성된 데이터를 리턴하는 시점에 동작
+		보통 사후처리 로직 추가시 사용. 
+		
+		after-throwing <aop:after-throwing>
+		예외가 발생하는 시점에 동작함.
+		
+		around
+		특정 어드바이스가 메소드 실행전과 후에 모두 동작
 		
 		<aop:aspect ref = "log">
 	 	  	<aop:after pointcut-ref ="getPointcut" method = "printLog"/>
